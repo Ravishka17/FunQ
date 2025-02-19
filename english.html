@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FunQ - English</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Material+Icons+Round" rel="stylesheet">
 
     <style>
-        /* Google Font */
-        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
-
         /* Global Styles */
         body {
             margin: 0;
@@ -22,12 +22,13 @@
             align-items: center;
             min-height: 100vh;
             overflow-y: auto;
+            user-select: none;
         }
 
         /* Navbar */
         .navbar {
             width: 100%;
-            padding: 10px 20px;
+            padding: 5px 0;
             background: #6a11cb;
             color: white;
             display: flex;
@@ -40,14 +41,17 @@
         }
 
         .back-btn {
-            font-size: 2rem;
-            cursor: pointer;
+            font-size: 2.5rem;
+            cursor: none;
+            display: flex;
+            margin: 10px;
         }
 
         .nav-title {
             font-size: 1.8rem;
             flex: 1;
             text-align: center;
+            margin-right: 44px;
         }
 
         /* Grade GIF */
@@ -84,16 +88,17 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
+            margin-bottom: 10px;
         }
 
         .grade-btn {
             padding: 15px 25px;
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             border: none;
             border-radius: 20px;
             background: linear-gradient(45deg, #43cea2, #185a9d);
             color: white;
-            cursor: pointer;
+            cursor: none;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
@@ -109,7 +114,9 @@
 
     <!-- Navigation -->
     <div class="navbar">
-        <span class="back-btn" onclick="location.href='https://funq.vercel.app'">←</span>
+        <span class="back-btn" onclick="location.href='https://funq.vercel.app'">
+        <span class="material-icons-round">arrow_back</span>
+        </span>
         <span class="nav-title">FunQ - English</span>
     </div>
 
