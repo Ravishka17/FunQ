@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunQ - සිංහල</title>
+
+    <style>
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Fredoka', sans-serif;
+            background: linear-gradient(135deg, #fbc2eb, #a18cd1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+
+        /* Navbar */
+        .navbar {
+            width: 100%;
+            padding: 10px 20px;
+            background: #6a11cb;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .back-btn {
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .nav-title {
+            font-size: 1.8rem;
+            flex: 1;
+            text-align: center;
+        }
+
+        /* Grade GIF */
+        .grade-gif {
+            width: 300px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            margin: 40px 0;
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        /* Bounce Animation */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Grade Title */
+        .grade-title {
+            font-size: 2rem;
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Grade Buttons */
+        .grade-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .grade-btn {
+            padding: 15px 25px;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 20px;
+            background: linear-gradient(45deg, #43cea2, #185a9d);
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .grade-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="navbar">
+        <span class="back-btn" onclick="location.href='index.html'">←</span>
+        <span class="nav-title">FunQ - සිංහල</span>
+    </div>
+
+    <img src="https://res.cloudinary.com/diuuelnkm/image/upload/v1739905972/ezgif-1bbd1e17c0fdf4_lhfzew.gif"
+        alt="Grade GIF" class="grade-gif">
+
+    <p class="grade-title">ඔබේ ශ්‍රේණිය තෝරන්න:</p>
+
+    <div class="grade-buttons" id="gradeButtons"></div>
+
+    <script>
+        // Generate Grade Buttons (1 to 13)
+        const gradeContainer = document.getElementById('gradeButtons');
+        for (let i = 1; i <= 13; i++) {
+            gradeContainer.innerHTML += `<button class="grade-btn" onclick="alert('Grade ${i}')">${i} ශ්‍රේණිය</button>`;
+        }
+    </script>
+
+</body>
+
+</html>
