@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/lang/si/choose-grade", "destination": "/sinhala.html" },
+    { "source": "/lang/en/choose-grade", "destination": "/english.html" }
+  ]
+}
